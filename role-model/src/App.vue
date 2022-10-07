@@ -1,6 +1,6 @@
 <template>
   <div >
-    <b-container class="bv-example-row">
+    <b-container>
   <b-row>
     <b-col sm="4">
 
@@ -45,6 +45,3 @@ methods:{
 }
 </script>
 
-<style>
-
-</style>

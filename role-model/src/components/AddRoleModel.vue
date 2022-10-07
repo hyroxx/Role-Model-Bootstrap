@@ -1,6 +1,6 @@
 
 <template>
-    <div class="mx-auto " style="width: 100%;"> 
+    <div w-full> 
         <b-img :src="ImageSource" v-bind="mainProps" rounded alt="Rounded image"></b-img>
         <b-form>
             <b-form-input class ="mt-2" v-model ="modallName" placeholder="What is your role model name?"></b-form-input>
@@ -12,8 +12,9 @@
             <b-form-textarea v-model="modalAbout" placeholder="Notes about him/her..." rows="3" max-rows="6"></b-form-textarea> 
             <label for="tags-basic">Type a new tag and press enter</label>
                 <b-form-tags input-id="tags-basic" v-model="tags"></b-form-tags>
-                <p class="mt-2">Array: {{ tags }}</p>
+                <div class=" py-2"> 
             <b-button @click="sendRoleModel()" block variant="outline-primary">Submit</b-button>
+        </div>
         </b-form>
     </div>
     

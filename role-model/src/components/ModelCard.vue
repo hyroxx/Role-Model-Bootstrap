@@ -1,23 +1,23 @@
 <template>
-    <div>
+    <div> 
         <b-card
             :title="modalName"
             :img-src="modalImage"
             img-alt="Image"
             img-top
             tag="article"
-            style="max-width: 20rem;"
-            class="mb-2"
+            class="mb-2 max-w-xs"
   >
     <b-card-text>
       {{modalJob}} - {{modalNationality}} - {{modalBirthday}}
     </b-card-text>
+     
     <b-card-text>
       {{modalAbout}}
     </b-card-text>
 
-    <div class="tagsClass">
-     <b-card-text class="tagsText"
+    <div class="flex flex-row flex-wrap ">
+     <b-card-text class="mx-1 my-3 bg-teal-50 text-sm font-serif px-2 py-2 shadow-blue-500 shadow-sm "
         v-for="(i,index) in tags" :key="index">
         {{i}}
      </b-card-text>
@@ -50,19 +50,4 @@ export default {
 }
 
 </script>
-<style>
 
-.tagsClass{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.tagsText{
-    background-color:azure;
-    margin: 6px 4px 6px 4px;
-    font-size: 18px;
-    font-family: Cambria, sans-serif;
-    padding: 2px 3px 2px 3px;
-    box-shadow:0 0 2px mediumblue;
-}
-</style>
